@@ -14,7 +14,9 @@ int main()
     while(t--)
     {
         ll n,k;
-        cin>>n;
+        cin>>n>>k; ll a1[n],a2[k];
+        for(ll i=0;i<n;i++) cin>>a1[i];
+        for(ll i=0;i<k;i++) cin>>a2[i];
     }
     return 0;
 }
