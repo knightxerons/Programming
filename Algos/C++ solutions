@@ -1,0 +1,40 @@
+accumulate(start iteraotr,last iterator,variable,func)            
+fill_n(int <container type(can be int array)>,int n<the size>,int v<the value which is to be filled with>)  fills all the elemnts of an array or any container with a specific value
+
+abs()                               absolute value function
+ 
+Strings:
+    .getline(cin,str)                    input strings
+    .to_string()                         converts INTEGER into string
+    .stoi()                              converts string into int
+    .resize()                            resize the string
+    .replace(int,int,"string")           replaces the values in th string from index,till how many indexes and by what
+    .length()/.size                      tells the size of the string
+    .find("")                            finds the objects and returns the index at which it is found
+    .rfind("')                           finds the objects and returns the index at which it is found in reverse order
+    .compare(string)                     returns 0 if equal
+                                         returns -1 if in lexographical order
+    ==,>,<,>=,<=,!=                      all the comparision operations are valid
+    .capacity()                          tells the capacity (filled size of the vector)
+    .erase(int,int)                      erases from,how many      
+    
+Pair:
+    pair<type1,type2>varaible            makes pair
+    make_pair(1st value,2nd value)       assings the value in pair
+    .first/.second                       accesses the value of the given pair
+    ==,>,<,>=,<=,!=                      all the comparision operations are valid
+    
+Tempelate:
+    template<class x>void swapargs (x&a,x&b)
+        {
+            x swap;
+            swap=a;
+            a=b;
+            b=swap;
+        }
+Vector:
+        ==,>,<,>=,<=,!=                      all the comparision operations are valid
+        .push_back()                         pushes the value in ythe vector
+        .capacity()                          tells the capacity (filled size of the vector)        
+        .size()                              tells the size of the vector
+        .insert(int val,iterator)   <iterator=points to location before which insertion is to be made>

@@ -1,0 +1,40 @@
+#include<bits/stdc++.h>
+using namespace std;
+int sum=0,m=0;
+vector<int>v;
+void search(int x,int arr[],int n)
+{
+    if(x==n)
+    {
+        sum=0;
+        if(!v.empty()){
+        for(int i=0;i<v.size();i++)
+        {
+            sum+=arr[v[i]];
+        }
+        if(sum>m)
+        {
+            m=sum;
+        }
+        }
+        return;
+    }
+    search(x+1,arr,n);
+    v.push_back(x);
+    search(x+1,arr,n);
+    v.pop_back();
+}
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    for(int i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    search(0,arr,n);
+    cout<<m;
+    return 0;
+}
+ 
