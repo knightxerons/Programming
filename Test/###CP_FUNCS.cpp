@@ -3,7 +3,7 @@
 using namespace std;
 
 typedef long long int ll;
-const ll INF = 1ll<<60; 
+const ll INF = 1ll<<60;
 const ll MOD = 1e9 + 7;
 //************************************************************************************************************
 //a^b modulo m (for normal power raise m=MOD)
@@ -22,39 +22,12 @@ ll pow_mod(ll a, ll b, ll m)
     return res;
 }
 //************************************************************************************************************
-//hcf (a,b)
-ll HCF(ll a,ll b)
-{
-    if(b==0)return a;
-    else
-        return HCF(b,a%b);
-}
-//************************************************************************************************************
-//lcm (a,b)
-ll LCM(ll a,ll b)
-{
-    return (a*b)/HCF(a,b);
-}
-//************************************************************************************************************
-//find_the_last_power_two
-ll  LAST_POW_2(ll a)
-{
-    ll k;
-    for(ll i=127;i>=0;i++)
-    {
-        k=a>>i;
-        if(k&1)
-            return i;
-    }
-    return 0;
-}
-//************************************************************************************************************
 //binary_search
 ll BINARY_SEARCH(ll arr[],ll n,ll a)
 {
     ll k=0;
-    for (ll b=n/2;b>=1;b/=2) 
-        while(k+b<n && array[k+b]<=x) k+=b;
+    for (ll b=n/2;b>=1;b/=2)
+        while(k+b<n && array[k+b]<=a) k+=b;
     //Returns the "Previous" Index if the element is not found
     return k;
 }

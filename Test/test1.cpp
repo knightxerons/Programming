@@ -1,52 +1,39 @@
 #include<bits/stdc++.h>
 using namespace std ;
-typedef long long int ll;
 
-const ll INF = 1e15;
+typedef long long int ll;
+typedef vector<ll>vi;
+typedef pair<ll,ll>pi;
+
+const ll INF = 1e18;
 const ll MOD = 1e9 + 7;
-const string ttt= "Test";
+
+#define pb push_back
+#define ff first
+#define ss second
+
+#define dbs cout<<"Debug\n";
+#define dbar(arr,n){dbs;for(int i=0;i<n;i++) cout<<arr[i]<<" ";} cout<<'\n';
+
+#define fl(i,n) for(ll i=0;i<n;++i)
+#define fls(i,l,n) for(ll i=l;i<n;++i)
+#define flb(i,l,n) for(ll i=l-1;i>=n;--i)
+#define al(z) for(auto it : z)
+
+#define maxn (ll)1e5+7
 
 int main()
 {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
-    ll t; cin>>t;
-    while(t--)
+    ll TT=1; cin>>TT;
+    while(TT--)
     {
-        string w1="Ashishgup";
-        string w2="FastestFinger";
-        ll n,m=0,k=0;
+        ll n,k;
         cin>>n;
-        if(n==1) cout<<w2<<endl;
-        else if(n%2==1) cout<<w1<<endl;
-        else
-        {
-            while(n%2==0) {n/=2;k++;}
-            if(n==1)
-            {
-                if(k>1)
-                cout<<w2<<endl;
-                else cout<<w1<<endl;
-                continue;
-            }
-            for(ll i=3;i*i<=n;i++)
-            {
-                if(i*i==n&&n%i==0) m++;
-                else if(n%i==0) m+=2;
-            }
-            if(m==0) m++;
-            if(m%2==0)
-            {
-                if(k>1) cout<<w2;
-                else cout<<w1;
-            }
-            else
-            {
-                if(k>1) cout<<w1;
-                else cout<<w2;
-            }
-            cout<<endl;
-         }
     }
     return 0;
 }
+
+
+
